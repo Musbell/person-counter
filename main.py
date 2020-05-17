@@ -132,6 +132,8 @@ def main():
 
             current_count = 0
             for obj in result[0][0]:
+                # Draw bounding box for object when it's probability is more than
+                #  the specified threshold
                 if obj[2] > prob_threshold:
                     xmin = int(obj[3] * cap_w)
                     ymin = int(obj[4] * cap_h)
